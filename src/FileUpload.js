@@ -32,12 +32,12 @@ class FileUpload extends Component {
             const data = new FormData()
 
             // Loop through all uploaded files and append to data
-            for (var x = 0; x<this.state.selectedFile.length; x++) {
+            for (var x = 0; x < this.state.selectedFile.length; x++) {
                 data.append('file', this.state.selectedFile[x])
             }
 
             // Use axios to upload data
-            axios.post("http://localhost:8000/upload", data, {
+            axios.post("http://localhost:8000/submit", data, {
             })
                 .then(res => { // then print response status
                     console.log(res.statusText)

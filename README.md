@@ -1,4 +1,5 @@
 # Dear Future Me
 
+These two commands must be run to initialize the application:  
 `npm run start`  
-`nodemon server.js`
+`nodemon backend/server.js`
