@@ -34,10 +34,9 @@ class AddFiles extends Component {
                 fileData.append('file', this.state.selectedFile[x])
             }
         }
-        console.log(this.state.selectedFile);
         // Go to date/time selection page and preserve data
         this.props.history.push({
-            pathname: '/when_to_send',
+            pathname: '/add_date',
             state: {
                 message: this.props.location.state.message,
                 files: this.state.selectedFile

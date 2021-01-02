@@ -3,7 +3,10 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import Home from './components/Home';
 import AddMessage from './components/AddMessage';
 import AddFiles from './components/AddFiles';
-import WhenToSend from "./components/WhenToSend";
+import AddDate from "./components/AddDate";
+import AddEmail from "./components/AddEmail";
+import AlmostDone from "./components/AlmostDone";
+import Review from "./components/Review";
 
 export default class App extends Component {
 
@@ -27,8 +30,17 @@ export default class App extends Component {
                 <Route exact path="/add_files">
                     <AddFiles />
                 </Route>
-                <Route exact path="/when_to_send">
-                    <WhenToSend />
+                <Route exact path="/add_date">
+                    <AddDate />
+                </Route>
+                <Route exact path="/add_email">
+                    <AddEmail />
+                </Route>
+                <Route exact path="/almost_done">
+                    <AlmostDone />
+                </Route>
+                <Route exact path="/review">
+                    <Review />
                 </Route>
             </Router>
         );
