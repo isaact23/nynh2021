@@ -17,12 +17,6 @@ code {
     monospace;
 }
 
-img {
-    float: right;
-    width: 500px;
-    margin-right: 20px;
-}
-
 /* Home page */
 .centerPanel {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -36,28 +30,33 @@ img {
     overflow: hidden;
 }
 .leftSide {
-    display: flex;
-    flex-direction: column;
-    margin-left: 50px;
+    width: 50%;
+    float: left;
+    margin-left: 3%;
 }
-
+.rightSide {
+    width: 40%;
+    float: right;
+    margin-right: 3%;
+}
+img {
+    height: 95%;
+}
 
 /* Add Content page */
 .title {
     margin-left: 50px;
 }
-.column {
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
+.addMessageLeftSide {
+    width: 20%;
+    height: 100%;
+    float: left;
+    flex-direction: column;
+    margin-left: 3%;
+    padding-left: 50px;
 }
-.addContentBtn {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: white;
-    width: 100%;
-    height: 70px;
-    padding-top: 40px;
-    margin-bottom: 20px;
-    text-size: 32px;
-    text-align: center;
+.addMessageRightSide {
+    width: 60%;
+    float: right;
+    margin-right: 3%;
 }

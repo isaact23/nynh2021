@@ -80,6 +80,8 @@ app.post('/submit',function(req, res) {
     saveData(fileData);
 });
 
-app.listen(8080, function() {
-    console.log('Server running on port 8000');
+//const port = process.env.PORT || 5000;
+const port = 5000;
+app.listen(port, function() {
+    console.log(`Listening on port ${port}`);
 });

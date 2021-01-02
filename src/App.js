@@ -1,10 +1,9 @@
-import './App.css';
 import {
     BrowserRouter as Router,
     Route
 } from "react-router-dom";
-import Home from './components/Home'
-import AddContent from './components/AddContent'
+import Home from './components/Home';
+import AddMessage from './components/AddMessage';
 
 export default function App() {
   return (
@@ -12,8 +11,8 @@ export default function App() {
           <Route exact path="/">
               <Home />
           </Route>
-          <Route exact path="/add_content">
-              <AddContent />
+          <Route exact path="/add_message">
+              <AddMessage />
           </Route>
       </Router>
   );

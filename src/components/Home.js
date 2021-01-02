@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 export default function Home() {
     return (
         <div class="centerPanel">
-            <img src="/img/hero-image.png"/>
             <div class="leftSide">
                 <h1>Dear Future Self,</h1>
                 <h2>Ready to create your time capsule letter?</h2>
@@ -12,9 +11,12 @@ export default function Home() {
                     Write a message or upload photos, videos, and audio files
                     to add to your time capsule. Then set a date and time and
                     send it to yourself!</p>
-                <Link to="/add_content">
-                    <Button variant="primary">Let's get started</Button>{' '}
+                <Link to="/add_message">
+                    <Button color="primary">Let's get started</Button>{' '}
                 </Link>
+            </div>
+            <div className="rightSide">
+                <img src="/img/hero-image.png"/>
             </div>
         </div>
     );
