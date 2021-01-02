@@ -40,7 +40,7 @@ code {
     margin-right: 3%;
 }
 img {
-    height: 95%;
+    width: 95%;
 }
 
 /* Add Content page */
@@ -52,6 +52,7 @@ img {
     height: 100%;
     float: left;
     flex-direction: column;
+    margin-top: 50px;
     margin-left: 3%;
     padding-left: 50px;
 }
