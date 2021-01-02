@@ -1,5 +1,3 @@
-import SendEmails from "./SendEmails";
-
 const express = require('express');
 const app = express();
 const multer = require('multer');
@@ -10,7 +8,7 @@ const mkdirp = require('mkdirp');
 app.use(cors())
 
 // Periodically check data to see if any emails need to be sent
-setInterval(SendEmails, 1000);
+//setInterval(SendEmails, 1000);
 
 // Read and parse file_data.json
 function readData() {
@@ -82,6 +80,6 @@ app.post('/submit',function(req, res) {
     saveData(fileData);
 });
 
-app.listen(8000, function() {
+app.listen(8080, function() {
     console.log('Server running on port 8000');
 });

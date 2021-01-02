@@ -1,11 +1,12 @@
-import "../css/AddContent.css"
 
 export default function AddContent() {
     return (
         <div>
-            <h1>Dear Future Self,</h1>
+            <div class="title">
+                <h1>Dear Future Self,</h1>
+            </div>
             <div class="column">
-                <div class="addContent">
+                <div class="addContentBtn">
                     Click to add content
                 </div>
             </div>
