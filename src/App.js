@@ -1,11 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-import FileUpload from "./FileUpload";
+import './css/App.css';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+import Home from './components/Home'
+import AddContent from './components/AddContent'
 
-function App() {
+export default function App() {
   return (
-    <FileUpload />
+      <Router>
+          <div>
+              <Route exact path="/">
+                  <Home />
+              </Route>
+              <Route exact path="/add_content">
+                  <AddContent />
+              </Route>
+          </div>
+      </Router>
   );
 }
-
-export default App;

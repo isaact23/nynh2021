@@ -1,0 +1,14 @@
+.leftSide {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+h2 {
+    margin-top: 70px;
+}
+
+img {
+    float: right;
+    width: 500px;
+}
