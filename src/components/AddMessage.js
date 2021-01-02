@@ -1,24 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 // Component to take a text-based user input to store.
-export default class AddMessage extends React.Component {
+class AddMessage extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            'message': ''
+            message: ''
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange = (event) => {
-        this.setState({'message': event.target.value});
+        this.setState({message: event.target.value});
     }
 
+    // Handle text box submission
     handleSubmit = (event) => {
-        this.handleChange(event);
-        console.log(this.state.message);
+        // Go to file selection page
+        this.props.history.push({
+            pathname: '/add_files',
+            state: {
+                message: this.state.message
+            }
+        });
     }
 
     render() {
@@ -36,7 +43,7 @@ export default class AddMessage extends React.Component {
                         <form onSubmit={this.handleSubmit}>
                             <label>
                                 Message:
-                                <input type="text" value={this.state.message} onChange={this.handleChange} />
+                                <input type="text" value={this.state.value} onChange={this.handleChange} />
                             </label>
                             <input type="submit" value="Submit" />
                         </form>
@@ -46,3 +53,5 @@ export default class AddMessage extends React.Component {
         );
     }
 }
+
+export default withRouter(AddMessage);
