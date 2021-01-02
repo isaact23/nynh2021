@@ -9,7 +9,8 @@
             "month": 1,
             "year": 2020
         },
-        "wasReturned": false
+        "wasReturned": false,
+        "privateKey": "Example"
     },
     "nextEmptyKey": 4
 }
