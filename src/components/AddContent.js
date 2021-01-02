@@ -1,6 +1,13 @@
 
 export default function AddContent() {
     return (
-        <h1>Add Content</h1>
+        <div>
+            <h1>Dear Future Self,</h1>
+            <div class="content">
+                <div class="addContent">
+
+                </div>
+            </div>
+        </div>
     );
 }
