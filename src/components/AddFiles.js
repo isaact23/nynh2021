@@ -39,7 +39,7 @@ class AddFiles extends Component {
             pathname: '/add_date',
             state: {
                 message: this.props.location.state.message,
-                files: this.state.selectedFile
+                files: fileData
             }
         });
     }

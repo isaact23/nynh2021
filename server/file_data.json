@@ -1,8 +1,25 @@
 {
+    "0": {
+        "message": "test",
+        "email": "",
+        "year": 2022,
+        "month": 0,
+        "day": 1,
+        "hour": 0,
+        "minute": 0,
+        "second": 0,
+        "wasReturned": false,
+        "secretKey": null
+    },
     "1": {
         "message": "",
-        "date": "",
         "email": "",
+        "year": 2022,
+        "month": 0,
+        "day": 1,
+        "hour": 0,
+        "minute": 0,
+        "second": 0,
         "wasReturned": false,
         "secretKey": null
     },

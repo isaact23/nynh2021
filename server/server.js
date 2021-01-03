@@ -6,6 +6,8 @@ const fs = require('fs');
 const mkdirp = require('mkdirp');
 
 app.use(cors())
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // Periodically check data to see if any emails need to be sent
 //setInterval(SendEmails, 1000);
@@ -61,11 +63,11 @@ function handleUpload(req, res, dir) {
 // Handle a submit request, which takes in files,
 // text, date, email, etc.
 app.post('/submit',function(req, res) {
+    console.log(req.body.files);
 
     // Read file_data.json
     const fileData = readData();
     const key = fileData.nextEmptyKey;
-    console.log(key);
 
     // Create new directory
     const dir = __dirname + '/file_storage/' + key.toString()
@@ -74,13 +76,20 @@ app.post('/submit',function(req, res) {
     // Upload files to new directory
     handleUpload(req, res, dir);
 
+    // Extract UTC time and date from the date string
+    const dateStr = req.body.date;
+    const dateObj = new Date(dateStr);
+
     // Update file_data.json
-    console.log(fileData);
-    console.log(fileData[key.toString()]);
     fileData[key.toString()] = {
-        "message": "",
-        "date": "",
-        "email": "",
+        "message": req.body.message,
+        "email": req.body.email,
+        "year": dateObj.getUTCFullYear(),
+        "month": dateObj.getUTCMonth(),
+        "day": dateObj.getUTCDate(),
+        "hour": dateObj.getUTCHours(),
+        "minute": dateObj.getUTCMinutes(),
+        "second": dateObj.getUTCSeconds(),
         "wasReturned": false,
         "secretKey": null
     };
