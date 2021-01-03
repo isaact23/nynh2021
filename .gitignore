@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# sensitive
+/server/credentials.json
+
 # testing
 /coverage
 
