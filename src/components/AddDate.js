@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { withRouter } from 'react-router-dom';
+import time_image from "../img/time.png"
 
 // A component for the user to input the date and time of message sending.
 class AddDate extends Component {
@@ -37,7 +38,7 @@ class AddDate extends Component {
                 </div>
                 <div className="centerPanel">
                     <div className="addMessageLeftSide">
-                        <img src="/img/time.png"/>
+                        <img src={time_image}/>
                     </div>
                     <div className="addMessageRightSide">
                         <h2>When do you want to send this to yourself? (Timezone UTC)</h2>

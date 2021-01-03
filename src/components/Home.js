@@ -1,5 +1,6 @@
 import { Button } from 'reactstrap';
 import { Link } from "react-router-dom";
+import hero_image from "../img/hero-image.png"
 
 export default function Home() {
     return (
@@ -16,7 +17,7 @@ export default function Home() {
                 </Link>
             </div>
             <div className="rightSide">
-                <img src="/img/hero-image.png"/>
+                <img src={hero_image}/>
             </div>
         </div>
     );

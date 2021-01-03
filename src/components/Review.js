@@ -88,11 +88,13 @@ class Review extends Component {
                     <h1>Dear Future Self,</h1>
                 </div>
                 <div className="centerPanel">
-                    <p>Your Message: {this.getMsgString()}</p>
-                    <p>Your Files: {this.getFileString()}</p>
-                    <p>Your Send Date: {this.getDateString()}</p>
-                    <p>Your Email: {this.getEmailString()}</p>
-                    <Button color="primary" onClick={this.submitForm}>Submit</Button>{' '}
+                    <div className="reviewText">
+                        <p>Your Message: {this.getMsgString()}</p>
+                        <p>Your Files: {this.getFileString()}</p>
+                        <p>Your Send Date: {this.getDateString()}</p>
+                        <p>Your Email: {this.getEmailString()}</p>
+                        <Button color="primary" onClick={this.submitForm}>Submit</Button>{' '}
+                    </div>
                 </div>
             </div>
         );

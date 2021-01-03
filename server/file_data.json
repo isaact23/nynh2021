@@ -1,15 +1,15 @@
 {
     "0": {
-        "message": "Hello! This is Isaac Thompson, and I just wanted to write you a letter to... the future. Note that the time since I sent this was approximately 5 minutes, so you've probably already forgotten. Until next time, -Isaac",
-        "email": "isaact23@vt.edu",
-        "date": "2021-01-03T04:38Z",
-        "wasSent": true,
+        "message": "Hello there!",
+        "email": "me@email.me",
+        "date": "2022-01-01T00:00Z",
+        "wasSent": false,
         "secretKey": null
     },
     "1": {
-        "message": "Hello! This is Isaac Thompson, and I just wanted to write you a letter to... the future. Note that the time since I sent this was approximately 5 minutes, so you've probably already forgotten. Until next time, -Isaac",
-        "email": "isaact23@vt.edu",
-        "date": "2000-01-01T00:00Z",
+        "message": "Sent from localhost concurrently",
+        "email": "shufflesninja@gmail.com",
+        "date": "2018-05-01T04:03Z",
         "wasSent": true,
         "secretKey": null
     },

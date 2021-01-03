@@ -26,6 +26,6 @@ it into `index.html`. Each page is contained in a JavaScript file under
 `/src/components`. The frontend uses Axios to send data to the backend.
 ### `/server`
 The NodeJS backend. When running, the server periodically checks through
-`file_data.json` to determine if it's time to send any letters. The server
+`file_data.json` to determine if it's time to send any emails. The server
 is also responsible for receiving data from the frontend, updating
 `file_data.json` accordingly, and storing user files in `/server/file_storage`.

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Link, withRouter} from 'react-router-dom';
 import {Button} from "reactstrap";
+import person_sitting_laptop from "../img/person-sitting-laptop.png"
 
 // A component for the user to input email.
 class AlmostDone extends Component {
@@ -28,7 +29,7 @@ class AlmostDone extends Component {
                 </div>
                 <div className="centerPanel">
                     <div className="addMessageLeftSide">
-                        <img src="/img/person-sitting-laptop.png"/>
+                        <img src={person_sitting_laptop}/>
                     </div>
                     <div className="addMessageRightSide">
                         <h2>You're almost done!</h2>

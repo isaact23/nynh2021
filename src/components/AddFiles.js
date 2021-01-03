@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { withRouter } from 'react-router-dom';
-
+import man_holding_box from "../img/man-holding-box.png"
 
 // The file upload box and handler.
 class AddFiles extends Component {
@@ -52,7 +52,7 @@ class AddFiles extends Component {
                 </div>
                 <div className="centerPanel">
                     <div className="addMessageLeftSide">
-                        <img src="/img/man-holding-box.png"/>
+                        <img src={man_holding_box}/>
                     </div>
                     <div className="addMessageRightSide">
                         <h2>What do you want to send yourself?</h2>

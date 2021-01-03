@@ -61,3 +61,8 @@ img {
     float: right;
     margin-right: 3%;
 }
+
+/* Review page */
+.reviewText {
+    margin-left: 5%;
+}

@@ -27,7 +27,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // Periodically check data to see if any emails need to be sent
-const secs = 60;
+const secs = 15;
 setInterval(function() {
     const fileData = readFileData();
     var didUpdate = false;

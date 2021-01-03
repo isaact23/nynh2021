@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import axios from 'axios';
 import {Link, withRouter} from 'react-router-dom';
-import {Button} from "reactstrap";
+import person_cheering from "../img/person-cheering.png"
 
 // A component for the user to input email.
 class Review extends Component {
@@ -18,7 +17,7 @@ class Review extends Component {
                 </div>
                 <div className="centerPanel">
                     <div className="addMessageLeftSide">
-                        <img src="/img/person-cheering.png"/>
+                        <img src={person_cheering}/>
                     </div>
                     <div className="addMessageRightSide">
                         <h2>Your time capsule letter is set!</h2>

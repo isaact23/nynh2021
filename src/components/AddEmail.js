@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { withRouter } from 'react-router-dom';
+import tech_image from "../img/tech.png"
 
 // A component for the user to input email.
 class AddEmail extends Component {
@@ -38,7 +39,7 @@ class AddEmail extends Component {
                 </div>
                 <div className="centerPanel">
                     <div className="addMessageLeftSide">
-                        <img src="/img/tech.png"/>
+                        <img src={tech_image}/>
                     </div>
                     <div className="addMessageRightSide">
                         <h2>Where are you sending this to?</h2>

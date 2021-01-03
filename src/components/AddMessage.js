@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
+import person_writing from "../img/person-writing.png"
 
 // Component to take a text-based user input to store.
 class AddMessage extends Component {
@@ -36,7 +37,7 @@ class AddMessage extends Component {
                 </div>
                 <div className="centerPanel">
                     <div className="addMessageLeftSide">
-                        <img src="/img/person-writing.png"/>
+                        <img src={person_writing}/>
                     </div>
                     <div className="addMessageRightSide">
                         <h2>What do you want to send yourself?</h2>
