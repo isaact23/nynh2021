@@ -1,12 +1,12 @@
-# Dear Future Me
+# Dear Future Self
 
 ## Overview
 Goodbye 2020, hello 2021! While it's tempting to toss away 2020
 as a bad memory, it's important to reflect on the positive moments
-too. _Dear Future Me_ is a great way to do that! This app allows
+too. _Dear Future Self_ is a great way to do that! This app allows
 you to send yourself a message and some files at some point in the
 future. That way, the next time you get ice cream with friends or
-do a road trip, you can use _Dear Future Me_ to remind yourself of
+do a road trip, you can use _Dear Future Self_ to remind yourself of
 these great times.
 
 ## Tools Used
