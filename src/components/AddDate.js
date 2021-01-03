@@ -6,13 +6,13 @@ class AddDate extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {date: "2022-01-01T00:00Z"};
+        this.state = {date: "2022-01-01T00:00"};
     }
 
     // Handle updated date/time
     handleUpdate = (event) => {
         this.setState({
-            date: event.target.value + "Z" // Z denotes UTC timezone
+            date: event.target.value
         })
     }
 
@@ -24,7 +24,7 @@ class AddDate extends Component {
             state: {
                 message: this.props.location.state.message,
                 files: this.props.location.state.files,
-                date: this.state.date
+                date: this.state.date + "Z" // Z denotes UTC timezone
             }
         });
     }

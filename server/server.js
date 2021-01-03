@@ -61,9 +61,7 @@ function handleUpload(req, res, dir) {
 // Handle a submit request, which takes in files,
 // text, date, email, etc.
 app.post('/submit',function(req, res) {
-    console.log(req);
 
-    console.log("Received call to submit data");
     // Read file_data.json
     const fileData = readData();
     const key = fileData.nextEmptyKey;
@@ -72,16 +70,17 @@ app.post('/submit',function(req, res) {
     // Create new directory
     const dir = __dirname + '/file_storage/' + key.toString()
     mkdirp.sync(dir);
-    console.log("Directory created!");
 
     // Upload files to new directory
     handleUpload(req, res, dir);
 
     // Update file_data.json
+    console.log(fileData);
+    console.log(fileData[key.toString()]);
     fileData[key.toString()] = {
-        "message": req.config.data.message,
-        "date": req.config.data.date,
-        "email": req.config.data.email,
+        "message": "",
+        "date": "",
+        "email": "",
         "wasReturned": false,
         "secretKey": null
     };

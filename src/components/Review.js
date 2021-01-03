@@ -49,8 +49,8 @@ class Review extends Component {
 
     getDateString() {
         const date = this.props.location.state.date;
-        const dateObj = Date(date);
-        return date.toString();
+        const dateObj = new Date(date);
+        return dateObj.toString();
     }
 
     getEmailString() {
@@ -71,7 +71,7 @@ class Review extends Component {
                 date: this.props.location.state.date,
                 email: this.props.location.state.email
             }).then((response) => {
-                console.log(response);
+                console.log("Done");
 
                 // When upload is done, go to the final page.
                 this.props.history.push('/finished');

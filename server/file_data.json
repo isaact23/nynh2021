@@ -1,19 +1,10 @@
 {
     "1": {
-        "email": "hello@app.test",
-        "phone": 5550149190,
-        "returnDate": {
-            "minute": 0,
-            "hour": 0,
-            "day": 2,
-            "month": 1,
-            "year": 2020
-        },
+        "message": "",
+        "date": "",
+        "email": "",
         "wasReturned": false,
-        "privateKey": "Example"
+        "secretKey": null
     },
-    "4": {
-        "wasReturned": false
-    },
-    "nextEmptyKey": 5
+    "nextEmptyKey": 2
 }
