@@ -7,6 +7,7 @@ import AddDate from "./components/AddDate";
 import AddEmail from "./components/AddEmail";
 import AlmostDone from "./components/AlmostDone";
 import Review from "./components/Review";
+import Finished from "./components/Finished";
 
 export default class App extends Component {
 
@@ -41,6 +42,9 @@ export default class App extends Component {
                 </Route>
                 <Route exact path="/review">
                     <Review />
+                </Route>
+                <Route exact path="/finished">
+                    <Finished />
                 </Route>
             </Router>
         );

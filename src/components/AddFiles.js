@@ -42,13 +42,6 @@ class AddFiles extends Component {
                 files: this.state.selectedFile
             }
         });
-
-        // Use axios to upload data
-        //axios.post("http://localhost:8000/submit", data, {
-        //})
-        //    .then(res => { // then print response status
-        //        console.log(res.statusText)
-        //    })
     }
 
     render() {

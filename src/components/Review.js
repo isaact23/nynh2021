@@ -3,16 +3,13 @@ import axios from 'axios';
 import {Link, withRouter} from 'react-router-dom';
 import {Button} from "reactstrap";
 
-// A component for the user to input email.
+// A component to allow the user to review their time capsule
+// and send it to the server once done.
 class Review extends Component {
 
     constructor(props) {
         super(props);
         this.state = {};
-        console.log(this.props.location.state.message);
-        console.log(this.props.location.state.files);
-        console.log(this.props.location.state.date);
-        console.log(this.props.location.state.email);
 
         this.nextPage = this.nextPage.bind(this);
         this.getMsgString = this.getMsgString.bind(this);
@@ -32,7 +29,7 @@ class Review extends Component {
 
     getMsgString() {
         const msg = this.props.location.state.message;
-        if (msg.length == 0) {
+        if (msg.length === 0) {
             return "No Message";
         } else {
             return msg;
@@ -58,7 +55,7 @@ class Review extends Component {
 
     getEmailString() {
         const email = this.props.location.state.email;
-        if (email.length == 0) {
+        if (email.length === 0) {
             return "No Email";
         } else {
             return email;
@@ -67,7 +64,21 @@ class Review extends Component {
 
     // Send all data to the server.
     submitForm() {
+        // Use axios to upload data
+        axios.post("/submit",{
+                message: this.props.location.state.message,
+                files: this.props.location.state.files,
+                date: this.props.location.state.date,
+                email: this.props.location.state.email
+            }).then((response) => {
+                console.log(response);
 
+                // When upload is done, go to the final page.
+                this.props.history.push('/finished');
+            }, (error) => {
+                console.log(error);
+            }
+        );
     }
 
     render() {

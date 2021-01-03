@@ -12,5 +12,8 @@
         "wasReturned": false,
         "privateKey": "Example"
     },
-    "nextEmptyKey": 4
+    "4": {
+        "wasReturned": false
+    },
+    "nextEmptyKey": 5
 }

@@ -13,7 +13,7 @@ app.use(cors())
 // Read and parse file_data.json
 function readData() {
     try {
-        const data = fs.readFileSync('backend/file_data.json', 'utf8');
+        const data = fs.readFileSync('server/file_data.json', 'utf8');
         const parsedData = JSON.parse(data);
         return parsedData;
     } catch (err) {
@@ -26,7 +26,7 @@ function readData() {
 function saveData(data) {
     try {
         const stringData = JSON.stringify(data, null, 4);
-        fs.writeFileSync('backend/file_data.json', stringData);
+        fs.writeFileSync('server/file_data.json', stringData);
     } catch (err) {
         console.error(err);
     }
@@ -61,6 +61,9 @@ function handleUpload(req, res, dir) {
 // Handle a submit request, which takes in files,
 // text, date, email, etc.
 app.post('/submit',function(req, res) {
+    console.log(req);
+
+    console.log("Received call to submit data");
     // Read file_data.json
     const fileData = readData();
     const key = fileData.nextEmptyKey;
@@ -75,9 +78,17 @@ app.post('/submit',function(req, res) {
     handleUpload(req, res, dir);
 
     // Update file_data.json
-    fileData[key.toString()] = {"wasReturned": false};
+    fileData[key.toString()] = {
+        "message": req.config.data.message,
+        "date": req.config.data.date,
+        "email": req.config.data.email,
+        "wasReturned": false,
+        "secretKey": null
+    };
     fileData.nextEmptyKey = key + 1;
     saveData(fileData);
+
+    res.send("Data upload success!");
 });
 
 //const port = process.env.PORT || 5000;
