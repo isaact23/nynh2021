@@ -1,17 +1,3 @@
 {
-    "0": {
-        "message": "Hello there!",
-        "email": "me@email.me",
-        "date": "2022-01-01T00:00Z",
-        "wasSent": false,
-        "secretKey": null
-    },
-    "1": {
-        "message": "Sent from localhost concurrently",
-        "email": "shufflesninja@gmail.com",
-        "date": "2018-05-01T04:03Z",
-        "wasSent": true,
-        "secretKey": null
-    },
-    "nextEmptyKey": 2
+    "nextEmptyKey": 0
 }
